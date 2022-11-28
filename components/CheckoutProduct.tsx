@@ -2,7 +2,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import React from 'react'
 import { urlFor } from '../sanity';
-import Currency from "react-currency-formatter";
+// import Currency from "react-currency-formatter";
 import { removeFromBasket } from "../redux/basketSlice";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
@@ -50,10 +50,10 @@ interface Props {
             </div>
             <div className='flex flex-col items-end space-y-4'>
             <h4 className="text-xl font-semibold lg:text-2xl">
-            <Currency
+            {/* <Currency
               quantity={items.reduce((total, item) => total + item.price, 0)}
               currency="CAD"
-            />
+            /> */}
             </h4>
             <button
             onClick={removeItemFromBasket}

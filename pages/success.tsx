@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Button from '../components/Button'
-import Currency from "react-currency-formatter";
+// import Currency from "react-currency-formatter";
 import { GetServerSideProps } from 'next'
 import { fetchLineItems } from '../utils/fetchLineItems'
 import { useSession } from 'next-auth/react'
@@ -144,7 +144,8 @@ interface Props {
                   </button>
   
                   <p className="text-xl font-medium text-black">
-                    <Currency quantity={subtotal + 20} />
+                    CAD
+                    {/* <Currency quantity={subtotal + 20} /> */}
                   </p>
                 </div>
               </div>
@@ -172,10 +173,10 @@ interface Props {
                         </div>
                         <p className="flex-1">{product.description}</p>
                         <p>
-                          <Currency
+                          {/* <Currency
                             quantity={product.price.unit_amount / 100}
                             currency={product.currency}
-                          />
+                          /> */}
                         </p>
                       </div>
                     ))}
@@ -184,7 +185,7 @@ interface Props {
                     <div className="flex justify-between text-sm">
                       <p className="text-[gray]">Subtotal</p>
                       <p className="font-medium">
-                        <Currency quantity={subtotal} />
+                        {/* <Currency quantity={subtotal} /> */}
                       </p>
                     </div>
                     <div className="flex justify-between text-sm">
@@ -194,7 +195,7 @@ interface Props {
                     <div className="flex justify-between text-sm">
                       <p className="text-[gray]">Shipping</p>
                       <p className="font-medium">
-                        <Currency quantity={20} currency="USD" />
+                        {/* <Currency quantity={20} currency="CAD" /> */}
                       </p>
                     </div>
                   </div>
@@ -203,7 +204,7 @@ interface Props {
                     <p className="flex items-center gap-x-2 text-xs text-[gray]">
                       CAD
                       <span className="text-xl font-medium text-black">
-                        <Currency quantity={subtotal + 20} />
+                        {/* <Currency quantity={subtotal + 20} /> */}
                       </span>
                     </p>
                   </div>
